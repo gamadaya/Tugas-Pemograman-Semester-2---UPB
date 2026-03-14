@@ -1,1 +1,122 @@
+package com.mycompany.bangunruang;
+import java.util.Scanner;
+/**
+ *
+ * @author gamad
+ */
 
+
+public class BangunRuang {
+
+    public static void main(String[] args) {
+      Scanner input = new Scanner(System.in);
+      double pi = 3.141592653589793;
+        
+      while (true){  
+        System.out.println("PILIH BANGUN RUANG");
+        System.out.println("1. Kubus");
+        System.out.println("2. Balok");
+        System.out.println("3. Tabung");
+        System.out.println("4. Bola");
+        System.out.println("5. Kerucut");
+        System.out.println("6. Prisma");
+        System.out.println("7. Limas");
+        System.out.print("Pilihan Anda : ");
+        int pilihan = input.nextInt();
+        
+        if (pilihan == 0) {
+            System.out.println("Program Selesai");
+            return;
+        }
+        
+        switch (pilihan) {
+            case 1:
+                System.out.print("Masukkan sisi kubus :");
+                double s = input.nextDouble();
+                double volumeKubus = s * s * s;
+                double luasKubus = 6 * s * s;
+                System.out.println("Volume Kubus : " + volumeKubus);
+                System.out.println("Luas Kubus : " + luasKubus);
+                break;
+                
+            case 2:
+                System.out.print("Masukkan Panjang Balok : ");
+                double p = input.nextDouble();
+                System.out.print("Masukkan Lebar Balok : ");
+                double l = input.nextDouble();
+                System.out.print("Masukkan Tinggi Balok : ");
+                double tBalok = input.nextDouble();
+                double volumeBalok = p * l * tBalok;
+                double luasBalok = 2 * (p * l + p * tBalok + l * tBalok);
+                System.out.println("Volume Balok : " + volumeBalok);
+                System.out.println("Luas Balok : " + luasBalok);
+                break;
+                
+            case 3:
+                System.out.print("Masukkan Jari-Jari Tabung: ");
+                double rTabung = input.nextDouble();
+                System.out.print("Masukkan Tinggi Tabung; ");
+                double tTabung = input.nextDouble();
+                double volumeTabung = pi * rTabung * rTabung * tTabung;
+                double luasTabung = 2 * pi * rTabung * ( rTabung + tTabung);
+                System.out.printf("Volume Tabung : %.2f%n", volumeTabung);
+                System.out.printf("Luas Tabung   : %.2f%n", luasTabung);
+                break;
+                
+            case 4:
+                System.out.print("Masukkan Jari-Jari Bola : ");
+                double rBola = input.nextDouble();
+                double volumeBola = (4.0 / 3.0) * pi * rBola * rBola * rBola;
+                double luasBola = 4 * pi * rBola * rBola;
+                System.out.printf("Volume Bola : %.2f%n" , volumeBola);
+                System.out.printf("Luas Bola : %.2f%n" , luasBola);
+                break;
+                
+            case 5:
+                System.out.print("Masukkan Jari-Jari Kerucut : ");
+                double rKerucut = input.nextDouble();
+                System.out.print("Masukkan Tinggi Kerucut :  ");
+                double tKerucut = input.nextDouble();
+                double sK = Math.sqrt((rKerucut * rKerucut) + (tKerucut * tKerucut)); // sK = Garis Pelukis Kerucut (s)
+                double volumeKerucut = (1.0 / 3.0) * pi * rKerucut * rKerucut * tKerucut;
+                double luasKerucut = pi * rKerucut * (rKerucut + sK);
+                System.out.printf("Garis Pelukis Kerucut : %.2f%n" , sK);
+                System.out.printf("Volume Kerucut : %.2f%n" , volumeKerucut);
+                System.out.printf("Luas Kerucut : %.2f%n" , luasKerucut);
+                break;
+                
+            case 6 :
+                System.out.print("Masukkan Sisi Alas Limas : ");
+                double sAlas = input.nextDouble();
+                System.out.print("Masukkan Tinggi Limas : ");
+                double tLimas = input.nextDouble();
+                double tST = Math.sqrt ((tLimas * tLimas) + ((sAlas / 2) * (sAlas /2))); // Rumus Tinggi Segitiga Sisi Tegak
+                double volumeLimas = (1.0 / 3.0) * (sAlas * sAlas) * tLimas;
+                double luasLimas = (sAlas * sAlas) + (4 * (0.5 * sAlas * tST));
+                System.out.printf("Tinggi Segitiga Sisi Tegak : %.2f%n" , tST);
+                System.out.printf("Volume Limas : %.2f%n" , volumeLimas);
+                System.out.printf("Luas Limas : %.2f%n" , luasLimas);
+                break;
+                
+            case 7 :
+                System.out.print("Masukkan Alas Prisma : ");
+                double aPrisma = input.nextDouble();
+                System.out.print("Masukkan Tinggi Segitiga : ");
+                double tSegitiga = input.nextDouble();
+                double sisiMiring = Math.sqrt ((aPrisma * tSegitiga) + (tSegitiga * tSegitiga));
+                System.out.print("Masukkan Tinggi Prisma: ");
+                double tPrisma = input.nextDouble();
+                double volumePrisma = (0.5 * aPrisma * tSegitiga) * tPrisma;
+                double luasPrisma = (2 * (0.5 * aPrisma * tSegitiga)) + ((aPrisma + tSegitiga + sisiMiring)* tPrisma);
+                System.out.printf("Sisi Miring Alas : %.2f%n" , sisiMiring);
+                System.out.printf("Volume Prisma : %.2f%n" , volumePrisma);
+                System.out.printf("Luas Prisma : %.2f%n" , luasPrisma);
+                break;
+                
+                       
+            default :
+                System.out.println("Not Found ERORR 404");
+        }
+    }
+  }
+}
