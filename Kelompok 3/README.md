@@ -304,4 +304,98 @@ Program ini akan menampilkan:
 - IQ tertinggi, terendah, dan rata-rata
 - Perubahan nilai IQ setelah dimodifikasi
 
+# Penjelasan Detail Kode Array 2 Dimensi
+
+
+## 1. **Deklarasi Kelas**
+```java
+public class Array2Dimensi {
+```
+- Mendefinisikan kelas bernama `Array2Dimensi`
+- Kelas ini berfungsi untuk mendemonstrasikan penggunaan array 2 dimensi (matriks)
+
+## 2. **Method Main**
+```java
+public static void main(String[] args) {
+```
+- Titik awal program Java
+- Metode ini otomatis dijalankan ketika program dimulai
+
+## 3. **Deklarasi dan Inisialisasi Matriks**
+```java
+int[][] matriks = {
+    {1, 2, 3},
+    {4, 5, 6},
+    {7, 8, 9}
+};
+```
+**Penjelasan:**
+- `int[][]` = Array 2 dimensi dengan tipe data integer
+- `matriks` = Nama variabel
+- Membuat matriks **3×3** (3 baris, 3 kolom):
+  ```
+  1 2 3
+  4 5 6
+  7 8 9
+  ```
+
+## 4. **Loop Menampilkan Isi Matriks**
+```java
+System.out.println("Isi matriks:");
+for (int i = 0; i < matriks.length; i++) {
+    for (int j = 0; j < matriks[i].length; j++) {
+        System.out.print(matriks[i][j] + " ");
+    }
+    System.out.println();
+}
+```
+**Penjelasan:**
+- **Loop luar (i)**: Iterasi untuk setiap **baris** (0 hingga 2)
+- **Loop dalam (j)**: Iterasi untuk setiap **kolom** dalam baris tersebut (0 hingga 2)
+- `matriks[i][j]`: Mengakses elemen pada baris i, kolom j
+- `System.out.print()`: Menampilkan elemen dengan spasi
+- `System.out.println()`: Pindah ke baris berikutnya setelah setiap baris
+
+**Output:**
+```
+Isi matriks:
+1 2 3 
+4 5 6 
+7 8 9 
+```
+
+## 5. **Loop Menghitung Total Elemen**
+```java
+int total = 0;
+for (int i = 0; i < matriks.length; i++) {
+    for (int j = 0; j < matriks[i].length; j++) {
+        total += matriks[i][j];
+    }
+}
+System.out.println("Jumlah semua elemen = " + total);
+```
+**Penjelasan:**
+- `int total = 0;` = Variabel untuk menyimpan hasil penjumlahan
+- Loop nested yang sama seperti sebelumnya
+- `total += matriks[i][j]` = Menambahkan setiap elemen ke total
+- **Perhitungan**: 1+2+3+4+5+6+7+8+9 = **45**
+
+**Output:**
+```
+Jumlah semua elemen = 45
+```
+
+## 📋 Ringkasan Fungsi Program
+| Fungsi | Penjelasan |
+|--------|-----------|
+| **Input** | Matriks 3×3 dengan nilai 1-9 |
+| **Proses** | Menampilkan elemen dan menghitung jumlah |
+| **Output** | Tampilan matriks dan total = 45 |
+
+## 💡 Konsep Kunci
+- **Array 2D**: Struktur data berbentuk tabel dengan baris dan kolom
+- **Nested Loop**: Loop dalam loop untuk mengakses semua elemen
+- **Akses Elemen**: `matriks[i][j]` mengakses elemen baris i, kolom j
+
+
 **Maksud Utama:** Menunjukkan operasi dasar array 1 dimensi seperti deklarasi, inisialisasi, pencarian nilai ekstrem, dan perhitungan statistik. 📊
