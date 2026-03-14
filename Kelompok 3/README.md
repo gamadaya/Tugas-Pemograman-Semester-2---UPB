@@ -1,7 +1,3 @@
-Berikut versi **yang sudah dirapikan, lebih terstruktur, dan ditambahkan bagian nama kelompok**. Format ini cocok untuk **laporan tugas / makalah / dokumentasi kode**.
-
----
-
 # PENJELASAN PROGRAM JAVA
 
 ## Bangun Ruang, Array 1 Dimensi, dan Array 2 Dimensi
