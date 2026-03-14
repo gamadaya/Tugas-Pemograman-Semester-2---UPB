@@ -421,6 +421,4 @@ Program ini menunjukkan penerapan beberapa konsep dasar dalam pemrograman Java, 
 6. **Operasi Matematika** untuk menghitung volume dan luas bangun ruang
 
 Program ini membantu memahami konsep dasar **struktur data, kontrol alur program, serta operasi matematika dalam Java**.
----
 
-Kalau kamu mau, saya juga bisa bantu bikin versi yang **lebih rapi la
