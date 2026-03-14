@@ -1,1 +1,50 @@
+public class Array1DimensiLarik {     public static void main(String[] args) { 
+       
+        // 1. DEKLARASI & INISIALISASI ARRAY 
+     
+        // isi nilai         int[] iq = {110, 111, 112}; 
+ 
+        // nama dan nim mahasiswa         String[] namaSiswa = new String[3];         namaSiswa[0] = "Riksa Siddiq Alrizki";         namaSiswa[1] = "Gama Daya Laksana";         namaSiswa[2] = "Yusuf Hamdani"; 
+ 
+        String[] nimSiswa = new String[3];         nimSiswa[0] = "312510015";         nimSiswa[1] = "312510051";         nimSiswa[2] = "312510049"; 
+ 
+         
+        // 2. MENAMPILKAN ISI ARRAY  
+       
+        System.out.println("===== DAFTAR IQ MAHASISWA ====="); 
+        for (int i = 0; i < iq.length; i++) { 
+            System.out.println("IQ ke-" + (i + 1) + " [" + namaSiswa[i] + " | NIM: " + nimSiswa[i] + "] = " + iq[i]); 
+        } 
+ 
+        
+        // 3. MENAMPILKAN ISI ARRAY  
+       
+        System.out.println("\n===== SEMUA IQ (for-each) =====");         for (int n : iq) { 
+            System.out.print(n + " "); 
+        } 
+ 
+        
+        // 4. MENCARI IQ TERTINGGI & TERENDAH 
+       
+        int tertinggi = iq[0];         int terendah  = iq[0];         for (int i = 1; i < iq.length; i++) {             if (iq[i] > tertinggi) tertinggi = iq[i];             if (iq[i] < terendah)  terendah  = iq[i]; 
+        } 
+        System.out.println("\n\n===== STATISTIK ====="); 
+        System.out.println("IQ Tertinggi : " + tertinggi); 
+        System.out.println("IQ Terendah  : " + terendah); 
+ 
+        
+        // 5. MENGHITUNG RATA-RATA IQ 
+        
+        int total = 0;         for (int n : iq) {             total += n; 
+        } 
+        double rataRata = (double) total / iq.length;         System.out.println("Rata-rata IQ : " + rataRata); 
+ 
+ 
+        // 6. MENGUBAH IQ DI INDEKS TERTENTU 
+         
+        iq[2] = 114; // Ganti IQ indeks ke-2 (Yusuf) dari 112 - 114 
+        System.out.println("\n===== SETELAH IQ YUSUF DIUBAH ====="); 
+        System.out.println("IQ " + namaSiswa[2] + " (indeks 2) = " + iq[2]); 
+    } 
+} 
 
